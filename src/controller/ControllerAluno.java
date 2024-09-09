@@ -15,7 +15,7 @@ public class ControllerAluno {
     private ControllerTurma controllerTurma;
 
     public ControllerAluno(ControllerTurma controllerTurma, List<Aluno> alunos) {
-        this.alunos = alunos;
+        this.alunos = (alunos != null) ? alunos : new ArrayList<>();
         this.controllerTurma = controllerTurma;
     }
 
@@ -48,6 +48,11 @@ public class ControllerAluno {
 
     public void removerAluno(String matricula) {
         try {
+            if (alunos == null || alunos.isEmpty()) {
+                System.out.println("Erro: Nenhum aluno para remover.");
+                return;
+            }
+
             Aluno aluno = buscarAlunoPorMatricula(matricula);
             if (aluno != null) {
                 alunos.remove(aluno);
