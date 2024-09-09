@@ -1,5 +1,5 @@
 # projeto-agenda-final-modulo02
-## Sistema de Gestão de Contatos, Turmas e Notas
+## Sistema de Gestão de Alunos, Turmas e Notas
 
 ## Descrição do Projeto
 
